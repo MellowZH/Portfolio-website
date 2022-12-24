@@ -8,13 +8,6 @@
   background-image: url('../svgs/layered-waves-haikei.svg');
 }
 
-.blob1 {
-  position: absolute;
-  width: 500px;
-  height: 300px;
-  background-image: url('../svgs/blob1.svg');
-}
-
 .container {
   display: flex;
   flex-direction: column;
@@ -24,13 +17,32 @@
 
 .textWrapper {
   z-index: 1;
-  color: #e9ded6;
+  color: #ffe5dd;
+  // transform: rotateY(60deg);
+  // perspective: 600px;
 }
 
 .headerText {
   font-size: 96px;
 }
 
-.bodyText {
+.bodyText,
+.aboutMeLink {
   font-size: 64px;
+}
+
+.aboutMeLink {
+  margin-top: 32px;
+  font-size: 48px;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+  display: inline-block;
+  transition: color 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  color: #ffe5dd;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.aboutMeLink:hover {
+  color: #ff0000;
 }

@@ -1,0 +1,21 @@
+.blob2 {
+  position: absolute;
+  background-image: url('./blob2.svg');
+  width: 500px;
+  height: 300px;
+  animation: move 20s infinite alternate;
+}
+
+.blob2:nth-child(2) {
+  filter: blur(50px);
+}
+
+@keyframes move {
+  from {
+    transform: translate(80vw, -30vh) rotate(-90deg);
+  }
+
+  to {
+    transform: translate(800px, 250px) rotate(-10deg);
+  }
+}
