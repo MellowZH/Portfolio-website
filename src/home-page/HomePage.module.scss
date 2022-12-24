@@ -1,0 +1,36 @@
+.page {
+  aspect-ratio: 16/9;
+  width: 100%;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url('../svgs/layered-waves-haikei.svg');
+}
+
+.blob1 {
+  position: absolute;
+  width: 500px;
+  height: 300px;
+  background-image: url('../svgs/blob1.svg');
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 55%;
+}
+
+.textWrapper {
+  z-index: 1;
+  color: #e9ded6;
+}
+
+.headerText {
+  font-size: 96px;
+}
+
+.bodyText {
+  font-size: 64px;
+}
