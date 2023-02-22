@@ -5,9 +5,7 @@ interface DefaultTheme {
   width: number[];
   heights: number[];
   colors: {
-    body: string;
     text: string;
-    toggleBorder: string;
     background: string;
   };
 }
@@ -18,25 +16,20 @@ const theme = {
   fontWeights: [100, 200, 300, 400, 500, 600, 700, 800, 900],
   width: [16, 32, 64, 128, 256],
   heights: [16, 32, 64, 128, 256],
-  // .... and other styles
 };
 
 const lightTheme: DefaultTheme = {
   ...theme,
   colors: {
-    body: '#FFF',
     text: '#363537',
-    toggleBorder: '#FFF',
-    background: '#363537',
+    background: '#FFF',
   },
 };
 const darkTheme: DefaultTheme = {
   ...theme,
   colors: {
-    body: '#363537',
     text: '#FAFAFA',
-    toggleBorder: '#6B8096',
-    background: '#999',
+    background: '#363537',
   },
 };
 

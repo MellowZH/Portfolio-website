@@ -1,34 +1,25 @@
 import React, { useState } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import styled, { ThemeProvider } from 'styled-components';
+import { ThemeProvider } from 'styled-components';
 import { GlobalStyles } from './globalStyles';
 import { darkTheme, lightTheme } from './theme';
 
 function App() {
-  const [theme, setTheme] = useState('light');
-  const themeToggler = () => {
-    theme === 'light' ? setTheme('dark') : setTheme('light');
-  };
+  const [theme, setTheme] = useState(
+    window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+      ? 'dark'
+      : 'light'
+  );
+
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) => {
+    setTheme(event.matches ? 'dark' : 'light');
+  });
 
   return (
-    <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
+    <ThemeProvider theme={theme === 'dark' ? darkTheme : lightTheme}>
       <GlobalStyles />
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.tsx</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <p>Isabelle H Photograhpy</p>
+        <p style={{ fontSize: '24px' }}>Comming soon...</p>
       </div>
     </ThemeProvider>
   );
