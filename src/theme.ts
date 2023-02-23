@@ -21,15 +21,15 @@ const theme = {
 const lightTheme: DefaultTheme = {
   ...theme,
   colors: {
-    text: '#363537',
+    text: '#282c34',
     background: '#FFF',
   },
 };
 const darkTheme: DefaultTheme = {
   ...theme,
   colors: {
-    text: '#FAFAFA',
-    background: '#363537',
+    text: '#FFF',
+    background: '#282c34',
   },
 };
 
