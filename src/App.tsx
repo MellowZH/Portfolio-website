@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import { ThemeProvider } from 'styled-components';
+import Page from './components/Page/Page';
 import { GlobalStyles } from './globalStyles';
 import { darkTheme, lightTheme } from './theme';
+import Text from './components/Text/Text.styled';
+import FlexBox from './components/Box/FlexBox.styled';
 
 function App() {
   const [theme, setTheme] = useState(
@@ -18,8 +21,11 @@ function App() {
     <ThemeProvider theme={theme === 'dark' ? darkTheme : lightTheme}>
       <GlobalStyles />
       <div className="App">
-        <p>Isabelle H Photograhpy</p>
-        <p style={{ fontSize: '24px' }}>Comming soon...</p>
+        <Page>
+          <FlexBox minHeight="100vh" justifyContent="center" alignItems="center">
+            <Text>Comming soon...</Text>
+          </FlexBox>
+        </Page>
       </div>
     </ThemeProvider>
   );
